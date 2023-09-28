@@ -1,3 +1,4 @@
+/* Splash Screen */
 let intro = document.querySelector('.intro')
 let logo = document.querySelector('.logo-header')
 let logoSpan = document.querySelectorAll('.logo');
@@ -27,3 +28,13 @@ window.addEventListener('DOMContentLoaded', ()=>{
         }, 2300)
     })
 })
+
+const headerText = document.querySelector('header h4');
+
+headerText.addEventListener('mouseenter', () => {
+  headerText.classList.add('rainbow-effect');
+});
+
+headerText.addEventListener('mouseleave', () => {
+  headerText.classList.remove('rainbow-effect');
+});

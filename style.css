@@ -13,10 +13,108 @@ header{
 }
 header h4{
     position: absolute;
-    left: 10;
+    left: 20;
     bottom: 1rem;
     font-size: 1.6rem;
+    margin-left: 50px;
+    cursor: pointer;
+    color: #f6f7f7;
+
 }
+
+body{
+    overflow: hidden;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: #999d9e;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    margin-left: -50px;
+    line-height: 100px;
+    height: 70px;
+    z-index: 111;
+}
+
+.nav-items {
+    display: flex;
+}
+
+.nav-items li {
+    list-style: none;
+    margin: 0 15px;
+    position: relative; /* Add relative positioning to create a context for the circle */
+}
+
+.nav-items li a {
+    font-size: 1.19rem;
+    color: #f6f7f7;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+/* Add the circle on hover */
+.nav-items li a::before {
+    content: "";
+    position: absolute;
+    bottom: -5px; /* Adjust the position to be just under the link */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    background-color: #333;
+    border-radius: 50%;
+    opacity: 0;
+    transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Change the circle's size and opacity on hover */
+.nav-items li a:hover::before {
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+}
+
+/* Change link color on hover */
+.nav-items li a:hover {
+    color: #555; /* Adjust the link color on hover */
+}
+
+/* Define a class for the rainbow color effect */
+.rainbow-effect {
+    animation: rainbow 3s linear infinite;
+  }
+  
+  /* Define keyframes for the rainbow effect */
+  @keyframes rainbow {
+    0%, 100% {
+      color: red;
+    }
+    14% {
+      color: orange;
+    }
+    28% {
+      color: yellow;
+    }
+    42% {
+      color: green;
+    }
+    57% {
+      color: blue;
+    }
+    71% {
+      color: indigo;
+    }
+    85% {
+      color: violet;
+    }
+  }
 
 /* Splash Screen */
 .intro{
@@ -35,7 +133,7 @@ header h4{
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
-    color: #ffffff;
+    color: #f6f7f7;
 
 }
 
