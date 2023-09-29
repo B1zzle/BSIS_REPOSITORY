@@ -29,6 +29,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
     })
 })
 
+/* Rainbow Effect on Logo */
 const logoHome = document.querySelector('.logo-home');
 
 logoHome.addEventListener('mouseenter', () => {
@@ -39,6 +40,7 @@ logoHome.addEventListener('mouseleave', () => {
     logoHome.classList.remove('rainbow-effect');
 });
 
+/* Button Animation Fix */
 window.addEventListener('DOMContentLoaded', () => {
     let button = document.querySelector('button'); // Replace 'button' with your actual button selector
 
