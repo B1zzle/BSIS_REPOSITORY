@@ -4,22 +4,22 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
+
+.logo-home{
+    display: flex;
+    margin-right: 670px;
+    font-size: 1.6rem;
+    margin-left: 100px;
+    cursor: pointer;
+    color: #f6f7f7;
+}
+
 header{
     position: relative;
     left: 0;
     top: 0;
     width: 100%;
     height: 80px;
-}
-header h4{
-    position: absolute;
-    left: 20;
-    bottom: 1rem;
-    font-size: 1.6rem;
-    margin-left: 50px;
-    cursor: pointer;
-    color: #f6f7f7;
-
 }
 
 body{
@@ -115,6 +115,102 @@ nav {
       color: violet;
     }
   }
+
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+
+.cols{
+    width: 70%;
+    margin-right: 350px;
+
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 35px;
+    color: #f6f7f7;
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 45px;
+    bottom: 5px;
+    background-color: #161616;
+}
+
+h1{
+    display: block;
+    font-size: 5em;
+    font-weight: 900;
+    color: #f6f7f7;
+}
+
+.multiText{
+    color: #161616;
+    text-transform: capitalize;
+}
+
+p{
+    display: block;
+    width: 90%;
+    font-size: 1.2em;
+    margin-top: 20px;
+    color: #f6f7f7;
+}
+
+.btn {
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+
+button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: #161616;
+    background-color: #f6f7f7;
+    padding: 8px 14px;
+    margin: 40px 5px;
+    text-transform: capitalize;
+    position: relative;
+    overflow: hidden;
+    border-radius: 30px; 
+    z-index: 1;
+    visibility: hidden;
+}
+
+button::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    background: #f8c8dc; /* Change this color to the desired hover color */
+    color: #f6f7f7;
+    border-radius: 50%;
+    transition: 0.8s;
+    z-index: -1;
+}
+
+button:hover::before {
+    width: 200px;
+    height: 200px;
+}
 
 /* Splash Screen */
 .intro{
