@@ -143,7 +143,7 @@
     position: relative;
 }
 
-    .btns button {
+    .btns .but button {
         outline: none;
         border: none;
         cursor: pointer;
@@ -524,7 +524,7 @@
       box-shadow: 0 0 20px 10px lightcyan;
     }
     100% {
-      box-shadow: 0 0 10px 0px lightskyblue;
+      box-shadow: 0 0 10px 0px light;
     }
   }
   
@@ -532,7 +532,7 @@
     animation: glow 1s infinite;
   }
 
-  .card-1 button{
+  .card-1 a button{
       padding: 5px 10px;
       color:#161616;
       outline: none;
