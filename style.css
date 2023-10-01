@@ -4,12 +4,13 @@
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
-
+/* FRONT PAGE/PROFILE VIEW */
 .logo-home{
     display: flex;
-    margin-right: 670px;
+    justify-content: space-between;
     font-size: 1.6rem;
     margin-left: 100px;
+    bottom: 5px;
     cursor: pointer;
     color: #f6f7f7;
 }
@@ -22,10 +23,6 @@ header{
     height: 80px;
 }
 
-body{
-    overflow: hidden;
-}
-
 .container{
     width: 100%;
     min-height: 100vh;
@@ -35,21 +32,38 @@ body{
 nav {
     display: flex;
     width: 100%;
-    justify-content: flex-end;
-    margin-left: -50px;
-    line-height: 100px;
-    height: 70px;
-    z-index: 111;
+    justify-content: space-between;
+    height: 65px;
+    align-items: center;
+}
+
+.nav-bar.active {
+    display: flex;
+    right: 0;
+}
+
+.navi{
+    display: none;
+}
+
+marquee{
+    display: none;
+}
+
+.row{
+    display: none;
 }
 
 .nav-items {
     display: flex;
+    padding: 0 120px;
 }
 
 .nav-items li {
     list-style: none;
     margin: 0 15px;
-    position: relative; /* Add relative positioning to create a context for the circle */
+    position: relative; 
+
 }
 
 .nav-items li a {
@@ -59,11 +73,10 @@ nav {
     transition: color 0.3s ease;
 }
 
-/* Add the circle on hover */
 .nav-items li a::before {
     content: "";
     position: absolute;
-    bottom: -5px; /* Adjust the position to be just under the link */
+    bottom: -20px; 
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -74,24 +87,25 @@ nav {
     transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
 }
 
-/* Change the circle's size and opacity on hover */
 .nav-items li a:hover::before {
     width: 10px;
     height: 10px;
     opacity: 0.7;
 }
 
-/* Change link color on hover */
 .nav-items li a:hover {
-    color: #555; /* Adjust the link color on hover */
+    color: #555;
 }
 
-/* Define a class for the rainbow color effect */
+.hamburger {
+    font-size: 25px;
+    display: none;
+}
+
 .rainbow-effect {
     animation: rainbow 3s linear infinite;
   }
   
-  /* Define keyframes for the rainbow effect */
   @keyframes rainbow {
     0%, 100% {
       color: red;
@@ -116,13 +130,13 @@ nav {
     }
   }
 
-.wrapper{
+/* .wrapper{
     display: flex;
     width: 100%;
     height: 100vh;
     justify-content: center;
     align-items: center;
-    padding: 0 10%;
+    padding: 0% 10%;
     overflow: hidden;
     position: relative;
 }
@@ -131,6 +145,7 @@ nav {
     width: 70%;
     margin-right: 350px;
     position: relative;
+    background-color: red;
 }
 
 .cols0{
@@ -142,7 +157,7 @@ nav {
     position: absolute;
     font-size: 35px;
     color: #f6f7f7;
-    top: -200px;
+    top: -110px;
     bottom: 10px;
 }
 
@@ -151,6 +166,7 @@ nav {
     content: '';
     height: 3px;
     width: 45px;
+    left: 90px;
     top: 30px;
     bottom: 10px;
     background-color: #161616;
@@ -163,29 +179,32 @@ h1{
     font-weight: 900;
     color: #f6f7f7;
     margin: 0;
-    top: -150px;
+    top: -60px;
 }
 
 .multiText{
-    color: #161616;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(141deg, #adf1e0, #8075ff 28%, #ff7171 98%);
+    -webkit-background-clip: text;
     text-transform: capitalize;
 }
 
 p{
     display: flex;
     position: absolute;
-    width: 250%;
-    font-size: 1.5em;
+    width: 280%;
+    font-size: 1.2em;
     margin-top: 10px;
     color: #f6f7f7;
-    top: 30px;
+    top: 120px;
+    
 }
 
 .btn {
     width: 100%;
-    position: fixed;
-    left: 150px;
-    bottom: 50px;
+    position: relative;
+    left: 20px;
+    bottom: -140px;
 }
 
 button {
@@ -197,7 +216,7 @@ button {
     color: #161616;
     background-color: #f6f7f7;
     padding: 8px 14px;
-    margin: 60px -20px;
+    margin: 80px -20px;
     text-transform: capitalize;
     position: relative;
     overflow: hidden;
@@ -214,7 +233,7 @@ button::before {
     transform: translate(-50%, -50%);
     width: 0;
     height: 0;
-    background: #7981ed; /* Change this color to the desired hover color */
+    background-color: #1c1d20;
     border-radius: 50%;
     transition: 0.8s;
     z-index: -1;
@@ -238,19 +257,27 @@ button:hover::before {
 
 .imgbox img {
     position: relative;
-    height: 100%; /* Set the height to 100% to fill the container */
-    width: 100%; /* Set the width to 100% to fill the container */
-    object-fit: cover; /* Ensure the image covers the entire container */
-    object-position: top right; /* Adjust the position of the image within the container if needed */
-    animation: animateProfile 4s ease-in-out infinite;
+    height: 100%; 
+    width: 100%; 
+    object-fit: cover; 
+    object-position: top right; 
+    animation: animateProfile 4s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
 }
 
 @keyframes animateProfile {
-    50% {
-        right: 30px;
-        top: -10px;
+    0%, 100% {
+        transform: translate(0, 0); 
     }
-}
+    25% {
+        transform: translate(15px, -5px); 
+    }
+    50% {
+        transform: translate(30px, -10px); 
+    }
+    75% {
+        transform: translate(15px, -5px); 
+    }
+} */
 
 /* Splash Screen */
 .intro{
@@ -292,3 +319,138 @@ button:hover::before {
     opacity: 0;
     transition: ease-in-out 0.5s;
 }
+
+/* Main/Profile */
+
+main{
+    height: 100vh;
+    width: 100%;
+    background-color: #999d9e;
+}
+
+.homepage{
+    height: 80vh;
+    width: 100%;
+    display: flex;
+
+}
+
+.introduction{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+}
+
+.profile{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    height: 100%;
+    width: 100%;
+}
+
+.imgbox{
+    height: 100%;
+    width: 100%;
+}
+
+.imgbox img{
+    object-fit: cover;
+    height: 125%;
+    width: 100%;
+
+}
+
+.topline{
+    display: flex;
+    font-weight: bold;
+    font-size: 60px;
+    color: #f6f7f7;
+    margin-left: 95px;
+    margin-bottom: 65px;
+}
+
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 1.35em;
+    left: 245px;
+    bottom: 355px;
+    background-color: #161616;
+}
+
+.phrase{
+    display: flex;
+    position: absolute;
+    font-size: 6em;
+    font-weight: 900;
+    color: #f6f7f7;
+    margin-left: 93px;
+    margin-top: 175px;
+
+}
+
+
+.multiText{
+    margin-left: 22px;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(141deg, #adf1e0, #8075ff 28%, #ff7171 98%);
+    -webkit-background-clip: text;
+    text-transform: capitalize;
+}
+
+.profile-intro{
+    position: absolute;
+    font-size: 1.2em;   
+    margin-left: 100px;
+    color: #f6f7f7;
+    bottom: 100px; 
+}
+
+/* ABOUT PAGE */
+
+.about{
+    height: 100vh;
+    width: 100vw;
+    background-color: #fff
+}
+
+.text-container{
+    text-align: center;
+}
+
+.aboutMe {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    color: #161616;
+    height: 100px;
+    margin-top: 50px;
+}
+
+.aboutMe-text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 30px;
+    color: #161616;
+    margin-top: 20px;
+}
+
+.full-name{
+    font-size: 30px;
+    margin-left: 5px;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(141deg, #adf1e0, #8075ff 28%, #ff7171 98%);
+    -webkit-background-clip: text;
+    font-weight: bold;
+}
+
+
+
+
