@@ -1,13 +1,14 @@
 * {
     margin: 0;
     padding: 0;
+    /* border: 2px solid; */
     box-sizing: border-box;
     font-family: "Raleway", sans-serif;
   }
 
-  /* FRONT PAGE/PROFILE VIEW SECTION */
+  /* LOGO - NAV */
 
-  .logo-home {
+  .logo-home a{
     display: flex;
     justify-content: space-between;
     font-size: 1.6rem;
@@ -15,6 +16,7 @@
     bottom: 5px;
     cursor: pointer;
     color: #fff;
+    text-decoration: none;
   }
   
   header {
@@ -30,8 +32,6 @@
     min-height: 100vh;
     background-color: #999d9e;
   }
-  
-/* NAV */
 
   nav {
     display: flex;
@@ -39,6 +39,12 @@
     justify-content: space-between;
     height: 65px;
     align-items: center;
+  }
+
+  .nav-bar{
+    position: fixed;
+    background-color: #999d9e;
+    z-index: 1;
   }
   
   .nav-bar.active {
@@ -79,7 +85,7 @@
   .nav-items li a::before {
     content: "";
     position: absolute;
-    bottom: -20px;
+    bottom: -10px;
     left: 50%;
     transform: translateX(-50%);
     width: 0;
@@ -185,7 +191,7 @@
 
 
   
-  /* Splash Screen */
+  /* INTRO / SPLASH SCREEN */
   .intro {
     position: fixed;
     z-index: 1;
@@ -195,6 +201,7 @@
     height: 100vh;
     background-color: #161616;
     transition: 1s;
+    z-index: 2;
   }
   
   .logo-header {
@@ -224,7 +231,7 @@
     transition: ease-in-out 0.5s;
   }
   
-  /* Main/Profile */
+  /* MAIN / PROFILE SECTION */
   
   main {
     height: 100vh;
@@ -276,7 +283,7 @@
     margin-bottom: 65px;
   }
   
-  .topline::after {
+  /* .topline::after {
     position: absolute;
     content: "";
     height: 3px;
@@ -284,7 +291,7 @@
     left: 245px;
     bottom: 355px;
     background-color: #161616;
-  }
+  } */
   
   .phrase {
     display: flex;

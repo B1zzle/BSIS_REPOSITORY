@@ -30,7 +30,7 @@ window.addEventListener('DOMContentLoaded', ()=>{
 })
 
 /* Rainbow Effect on Logo */
-const logoHome = document.querySelector('.logo-home');
+const logoHome = document.querySelector('.logo-home a');
 
 logoHome.addEventListener('mouseenter', () => {
     logoHome.classList.add('rainbow-effect');
@@ -79,6 +79,8 @@ closeMenu.addEventListener('click', close)
 function open(){
     Nav.style.display = 'flex';
     Nav.style.right = '0';
+    console.log("gesge")
+    Nav.style.width = "100%"
 }
 
 function close() {

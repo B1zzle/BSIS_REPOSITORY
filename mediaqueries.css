@@ -2,6 +2,7 @@
     .logo-home{
         display: none;
     }
+
     .navi{
         display: flex;
         color: #47484a;
@@ -28,6 +29,10 @@
         justify-content: center;
         height: 100vh;
         align-items: flex-start;  
+        background-color: #1c1d20;
+    }
+
+    .nav-bar{
         background-color: #1c1d20;
     }
 
@@ -89,12 +94,18 @@
 }
 
 @media screen and (min-width:801px) {
-    nav{
+    .nav-bar{
         display: flex !important;
+    }
+
+    nav{
+        display: flex ;
+        width: 100% !important;
     }
 
     .exitMenu{
         display: none !important;
+        width: 100%;
     }
     
 }
