@@ -1,112 +1,172 @@
-@media screen and (max-width:800px){
-    .logo-home{
-        display: none;
+@media screen and (max-width: 800px) {
+    .logo-home {
+      display: none;
     }
-
-    .navi{
-        display: flex;
-        color: #47484a;
-        font-size: 12px;
-        margin-left: 75px;
-        margin-bottom: 10px;
+  
+    .navi {
+      display: flex;
+      color: #47484a;
+      font-size: 12px;
+      margin-left: 75px;
+      margin-bottom: 10px;
     }
-
-    marquee{
-        display: flex;
-        border: .5px solid #47484a;
-        width: 72%;
-        margin-left: 75px;
-        margin-bottom: 30px;
+  
+    marquee {
+      display: flex;
+      border: 0.5px solid #47484a;
+      width: 72%;
+      margin-left: 75px;
+      margin-bottom: 30px;
     }
-
-    nav{
-        display: none;
-        z-index: 1;
-        right: 0;  
-        width: 100%;
-        position: absolute;
-        flex-direction: column;
-        justify-content: center;
-        height: 100vh;
-        align-items: flex-start;  
-        background-color: #1c1d20;
+  
+    nav {
+      display: none;
+      z-index: 1;
+      right: 0;
+      width: 100%;
+      position: absolute;
+      flex-direction: column;
+      justify-content: center;
+      height: 100vh;
+      align-items: flex-start;
+      background-color: #1c1d20;
     }
-
-    .nav-bar{
-        background-color: #1c1d20;
+  
+    .nav-bar {
+      background-color: #1c1d20;
     }
-
-    .nav-items li a{
-        font-size: 50px;
-        padding: 15px 0;
+  
+    .nav-items li a {
+      font-size: 50px;
+      padding: 15px 0;
     }
-
-    .nav-items{
-        display: flex;
-        flex-direction: column;
-        color: white;
-        margin-left: 60px;
+  
+    .nav-items {
+      display: flex;
+      flex-direction: column;
+      color: white;
+      margin-left: 60px;
     }
-
-        /* Add the circle on hover */
+  
+    /* Add the circle on hover */
     .nav-items li a::before {
-        content: "";
-        position: absolute; 
-        bottom: 20px;
-        left: -40px;
-        transform: translateX(-50%);
-        width: 0;
-        height: 0;
-        background-color: white;
-        border-radius: 50%;
-        transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
+      content: "";
+      position: absolute;
+      bottom: 20px;
+      left: -40px;
+      transform: translateX(-50%);
+      width: 0;
+      height: 0;
+      background-color: white;
+      border-radius: 50%;
+      transition: width 0.3s ease, height 0.3s ease, opacity 0.3s ease;
     }
-
+  
     .nav-items li a:hover::before {
-        width: 10px;
-        height: 10px;
-        opacity: 0.7;
+      width: 10px;
+      height: 10px;
+      opacity: 0.7;
     }
-
+  
     .nav-items li a:hover {
-        color: #555;
+      color: #555;
     }
-
-    .hamburger{
-        display: flex;
-        color: #f6f7f7;
-        position: absolute;
-        right: 60px;
-        top: 30px;
-        font-size: 35px;
-        z-index: 1;
+  
+    .hamburger {
+      display: flex;
+      color: #f6f7f7;
+      position: absolute;
+      right: 60px;
+      top: 30px;
+      font-size: 35px;
+      z-index: 1;
     }
-
-    .exitMenu{
-        display: flex;
-        color: white;
-        position: absolute;
-        font-size: 25px;
-        top: 30px;
-        left: 30px;
+  
+    .exitMenu {
+      display: flex;
+      color: white;
+      position: absolute;
+      font-size: 25px;
+      top: 30px;
+      left: 30px;
     }
-    
-}
-
-@media screen and (min-width:801px) {
-    .nav-bar{
-        display: flex !important;
+  }
+  
+  @media screen and (min-width: 801px) {
+    .nav-bar {
+      display: flex !important;
     }
-
-    nav{
-        display: flex ;
-        width: 100% !important;
+  
+    nav {
+      display: flex;
+      width: 100% !important;
     }
-
-    .exitMenu{
-        display: none !important;
-        width: 100%;
+  
+    .exitMenu {
+      display: none !important;
+      width: 100%;
     }
-    
-}
-
+  }
+  
+  @media screen and (max-width: 764px) {
+    .phrase {
+      display: flex;
+      position: absolute;
+      font-size: 3em;
+      font-weight: 900;
+      color: #fff;
+      margin-left: 93px;
+      margin-top: 175px;
+    }
+  
+    .profile-intro {
+      position: absolute;
+      font-size: 16px;
+      margin-left: 100px;
+      color: #fff;
+    }
+  
+    .aboutMe-text {
+      display: flex;
+      font-size: 30px;
+      color: #161616;
+      margin-top: 40px;
+    }
+  
+    .custom-shape-divider-top-1696179529{
+      display: none;
+    }
+  
+  
+  }
+  
+  @media screen and (max-width: 500px) {
+    .topline {
+      display: flex;
+      font-weight: bold;
+      font-size: 60px;
+      color: #fff;
+      margin-left: 50px;
+      margin-bottom: 65px;
+    }
+  
+    .phrase {
+      display: flex;
+      position: absolute;
+      font-size: 3em;
+      font-weight: 900;
+      color: #fff;
+      margin-left: 50px;
+      margin-top: 115px;
+    }
+  
+    .profile-intro {
+      position: absolute;
+      font-size: 16px;
+      margin-left: 50px;
+      color: #fff;
+      bottom: 100px;
+      
+    }
+  }
+  

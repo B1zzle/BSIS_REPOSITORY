@@ -78,11 +78,12 @@ closeMenu.addEventListener('click', close)
 
 function open(){
     Nav.style.display = 'flex';
-    Nav.style.right = '0';
-    console.log("gesge")
+    // Nav.style.right = '0';
     Nav.style.width = "100%"
 }
 
 function close() {
+    Nav.style.display = 'none'; 
+    // Nav.style.right = '100%'; 
     Nav.style.width = '0';
 }
